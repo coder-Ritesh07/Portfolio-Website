@@ -1,0 +1,2943 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --primary-color: linear-gradient(to right bottom, #131665 50%, #470356);
+  --btn-font-weight: 600;
+  --btn-padding: 5px 10px 5px 10px;
+}
+::selection{
+  background-color: aquamarine;
+  color: black;
+  mix-blend-mode: difference;
+}
+.container {
+  position: relative;
+  height: 100%;
+  background: var(--primary-color);
+  background-repeat: no-repeat;
+}
+header {
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+
+
+.mobile-nav-bar{
+    position: absolute;
+    top: 100%;
+    left:0px;
+    width:100%;
+    height: 0;
+    background-color: #131665f0 ;
+    box-shadow: 0px 0px 5px 0px white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s linear;
+    backdrop-filter: blur(150px);
+}
+.mobile-nav-bar a{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 5px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 3px aqua;
+    transition: all 0.5s;
+}
+.mobile-nav-bar a:hover{
+  color: aquamarine;
+  text-shadow: 0 0 10px aquamarine;
+  transform: scale(1.05);
+}
+.menu-icon{
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: white;
+    display: none;
+}
+.close-icon{
+    display: none;
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: white;
+}
+#click{
+    display: none;
+}
+
+
+/* nav bar here */
+nav {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem 0 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(50px);
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.1);
+}
+.nav-links a {
+  display: inline-block;
+  margin-left: 1.8vw;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: white;
+  transition: all 0.5s;
+}
+.nav-links a:hover {
+  color: aquamarine;
+  text-shadow: 0 0 10px aquamarine;
+  transform: scale(1.05);
+}
+.nav-links a:active{
+  color: aquamarine;
+  text-shadow: 0 0 10px aquamarine;
+  transform: scale(1.05);
+
+}
+.logo {
+  font-weight: 600;
+  font-size: 1.9rem;
+}
+.ritesh {
+  background-color: aquamarine;
+  border-radius: 0.5rem;
+  padding: 0.1rem;
+  color: black;
+}
+.sau {
+  color: white;
+}
+.toggle-button {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  border-radius: 34px;
+  cursor: pointer;
+  background-color: aquamarine;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.1);
+}
+.toggle-button .slider {
+  position: absolute;
+  cursor: pointer;
+  width: 50%;
+  height: 90%;
+  bottom: 2px;
+  right: 2px;
+  top: 2px;
+  left: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+#check {
+  display: none;
+}
+#check:checked ~ .button .slider {
+  transform: translateX(85%);
+}
+
+/* main section here */
+main {
+  max-width: 90%;
+  margin: 0 auto;
+  height: 100%;
+}
+.my-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 80px 0px 100px 0px;
+}
+.my-details-leftpart {
+  color: white;
+  width: 480px;
+}
+.my-name h3 {
+  font-size: 2rem;
+}
+.my-name h1 {
+  font-size: 4.2rem;
+  font-weight: 800;
+}
+.my-name span {
+  font-size: 2rem;
+}
+.social-media-links {
+  margin-top: 20px;
+}
+.social-media-links .social-icon {
+  display: inline-block;
+  color: aqua;
+  font-size: 2rem;
+  margin-left: 1rem;
+  transition: transform 0.5s;
+}
+.social-media-links .social-icon:hover {
+  color: white;
+  transform: scale(1.4);
+}
+span .btn {
+  display: inline-block;
+  margin-top: 40px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  border-radius: 34px;
+  background-color: aqua;
+  padding: 5px 10px 5px 10px;
+  color: black;
+  transition: transform 0.5s;
+}
+span .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px 0px aqua;
+}
+.img img {
+  border-radius: 50%;
+  animation: shadow-effect 2s linear infinite;
+  transition: transform 0.5s;
+  width:400px;
+  height:380px;
+}
+@keyframes shadow-effect {
+  0% {
+    box-shadow: 0px 0px 40px 5px aqua;
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0px 0px 100px 5px aqua;
+    transform: scale(1.07);
+  }
+  100% {
+    box-shadow: 0px 0px 40px 5px aqua;
+    transform: scale(1);
+  }
+}
+/* About Me section */
+
+.about-me-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 80px 0px 80px 0px;
+}
+.about-me-section h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  color: aqua;
+}
+.about-me-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.about-me-content h3 {
+  font-size: 2rem;
+  color: white;
+}
+.about-me-content h3 span {
+  color: black;
+  background-color: aqua;
+  border-radius: 10px;
+}
+.about-me-content p {
+  margin-top: 20px;
+  width: 650px;
+  font-size: 1.3rem;
+  color: white;
+  letter-spacing: 1px;
+  width: 550px;
+}
+.about-me-content span a {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 1.6rem;
+  color: rgb(0, 0, 0);
+  font-weight: var(--btn-font-weight);
+  border-radius: 34px;
+  background-color: aqua;
+  padding: 5px 10px 5px 10px;
+  transition: transform 0.5s;
+}
+.about-me-content span a:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px 0px aqua;
+}
+
+.about-me-img img {
+  border-radius: 20px;
+  animation: up-down 2s linear infinite;
+  transition: transform 0.5s;
+}
+@keyframes up-down {
+  0% {
+    box-shadow: 0px 0px 40px 5px aqua;
+  }
+  50% {
+    box-shadow: 0px 0px 100px 5px aqua;
+  }
+  80% {
+    box-shadow: 0px 0px 120px 5px aqua;
+  }
+  100% {
+    box-shadow: 0px 0px 40px 5px aqua;
+  }
+}
+
+/* skills section shere */
+
+.all-skills {
+  margin-top: 40px;
+}
+.skills-section {
+  margin: 80px 0px 80px 0px;
+}
+.skills-section h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  color: aqua;
+}
+.html-header {
+  margin-bottom: 10px;
+}
+.html-header h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: aqua;
+}
+.html-header h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: aqua;
+}
+.header-distance {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.html-bar {
+  position: relative;
+  width: 100%;
+  height: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+}
+.html-bar span {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 90%;
+  height: 100%;
+  background-color: aqua;
+  box-shadow: 0px 0px 5px 0px aqua;
+  border-radius: 20px;
+  animation: bar-glow 1.6s linear infinite;
+}
+@keyframes bar-glow {
+  0% {
+    box-shadow: 0px 0px 5px 0px aqua;
+  }
+  50% {
+    box-shadow: 0px 0px 15px 0px aqua;
+  }
+  100% {
+    box-shadow: 0px 0px 5px 0px aqua;
+  }
+}
+.css-header {
+  margin-bottom: 10px;
+}
+.css-header h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: aqua;
+}
+.css-header h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: aqua;
+}
+.css-bar {
+  position: relative;
+  width: 100%;
+  height: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+}
+.css-bar span {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 70%;
+  height: 100%;
+  background-color: aqua;
+  box-shadow: 0px 0px 5px 0px aqua;
+  border-radius: 20px;
+  animation: bar-glow 1.6s linear infinite;
+}
+/* js skill css here */
+.js-header {
+  margin-bottom: 10px;
+}
+.js-header h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: aqua;
+}
+.js-header h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: aqua;
+}
+.js-bar {
+  position: relative;
+  width: 100%;
+  height: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+}
+.js-bar span {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 30%;
+  height: 100%;
+  background-color: aqua;
+  box-shadow: 0px 0px 5px 0px aqua;
+  border-radius: 20px;
+  animation: bar-glow 1.6s linear infinite;
+}
+/* react skill css here */
+.react-header {
+  margin-bottom: 10px;
+}
+.react-header h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: aqua;
+}
+.react-header h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: aqua;
+}
+.react-bar {
+  position: relative;
+  width: 100%;
+  height: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+}
+.react-bar span {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 20%;
+  height: 100%;
+  background-color: aqua;
+  box-shadow: 0px 0px 5px 0px aqua;
+  border-radius: 20px;
+  animation: bar-glow 1.6s linear infinite;
+}
+/* java skill section here */
+.java-header {
+  margin-bottom: 10px;
+}
+.java-header h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: aqua;
+}
+.java-header h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: aqua;
+}
+.java-bar {
+  position: relative;
+  width: 100%;
+  height: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+}
+.java-bar span {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  height: 100%;
+  background-color: aqua;
+  box-shadow: 0px 0px 5px 0px aqua;
+  border-radius: 20px;
+  animation: bar-glow 1.6s linear infinite;
+}
+/* My sql css section here */
+.mysql-header {
+  margin-bottom: 10px;
+}
+.mysql-header h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: aqua;
+}
+.mysql-header h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: aqua;
+}
+.mysql-bar {
+  position: relative;
+  width: 100%;
+  height: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+}
+.mysql-bar span {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  height: 100%;
+  background-color: aqua;
+  box-shadow: 0px 0px 5px 0px aqua;
+  border-radius: 20px;
+  animation: bar-glow 1.6s linear infinite;
+}
+
+/* certificates section here */
+.certifications-section {
+  margin: 80px 0px 80px 0px;
+}
+.certifications-section h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  color: aqua;
+  margin-bottom: 40px;
+}
+.certificates {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  column-gap: 50px;
+}
+.oasis-infobyte {
+  position: relative;
+  width: 450px;
+  height: 280px;
+  overflow: hidden;
+  animation: glow-shad 2s linear infinite;
+}
+@keyframes glow-shad {
+  0% {
+    box-shadow: 0px 0px 10px 0px aqua;
+  }
+  50% {
+    box-shadow: 0px 0px 40px 0px aqua;
+  }
+  100% {
+    box-shadow: 0px 0px 10px 0px aqua;
+  }
+}
+.o-infobyte-img {
+  width: 100%;
+  height: 100%;
+}
+.oasis-infobyte a {
+  position: absolute;
+  bottom: -400px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.618);
+  transition: all 0.5s linear;
+  color: white;
+  font-weight: 800;
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.oasis-infobyte strong{
+  font-size: 2.3rem;
+  text-decoration: underline;
+}
+.oasis-infobyte:hover a {
+  text-shadow: 0px 0px 50px aqua;
+  bottom: -0px;
+}
+
+
+
+.damits {
+  position: relative;
+  width: 450px;
+  height: 280px;
+  border: 1px solid white;
+  overflow: hidden;
+  animation: glow-shad 2s linear infinite;
+}
+@keyframes glow-shad {
+  0% {
+    box-shadow: 0px 0px 10px 0px aqua;
+  }
+  50% {
+    box-shadow: 0px 0px 40px 0px aqua;
+  }
+  100% {
+    box-shadow: 0px 0px 10px 0px aqua;
+  }
+}
+.damits-img {
+  width: 100%;
+  height: 100%;
+}
+.damits a {
+  position: absolute;
+  bottom: -400px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.618);
+  transition: all 0.5s linear;
+  color: white;
+  font-weight: 800;
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.damits:hover a {
+  text-shadow: 0px 0px 50px aqua;
+  bottom: -0px;
+}
+.damits strong{
+  font-size: 2.3rem;
+  text-decoration: underline;
+}
+
+.internshala {
+  position: relative;
+  width: 450px;
+  height: 280px;
+  border: 1px solid white;
+  overflow: hidden;
+  animation: glow-shad 2s linear infinite;
+}
+@keyframes glow-shad {
+  0% {
+    box-shadow: 0px 0px 10px 0px aqua;
+  }
+  50% {
+    box-shadow: 0px 0px 40px 0px aqua;
+  }
+  100% {
+    box-shadow: 0px 0px 10px 0px aqua;
+  }
+}
+.internshala-img {
+  width: 100%;
+  height: 100%;
+}
+.internshala a {
+  position: absolute;
+  bottom: -400px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.618);
+  transition: all 0.5s linear;
+  color: white;
+  font-weight: 800;
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.internshala strong{
+  font-size: 2.3rem;
+  text-decoration: underline;
+}
+.internshala:hover a {
+  text-shadow: 0px 0px 50px aqua;
+  bottom: -0px;
+}
+
+.infutech {
+  position: relative;
+  width: 450px;
+  height: 280px;
+  overflow: hidden;
+  animation: glow-shad 2s linear infinite;
+}
+@keyframes glow-shad {
+  0% {
+    box-shadow: 0px 0px 10px 0px aqua;
+  }
+  50% {
+    box-shadow: 0px 0px 40px 0px aqua;
+  }
+  100% {
+    box-shadow: 0px 0px 10px 0px aqua;
+  }
+}
+.infutech-img {
+  width: 100%;
+  height: 100%;
+}
+.infutech a {
+  position: absolute;
+  bottom: -400px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.618);
+  transition: all 0.5s linear;
+  color: white;
+  font-weight: 800;
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.infutech strong{
+  font-size: 2.3rem;
+  text-decoration: underline;
+}
+.infutech:hover a {
+  text-shadow: 0px 0px 50px aqua;
+  bottom: -0px;
+}
+
+/* service css section here */
+.service-container {
+  margin: 80px 0px 80px 0px;
+}
+.service-container h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  color: aqua;
+  margin-bottom: 40px;
+}
+.service-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 30px;
+  margin-top: 60px;
+  margin-bottom: 70px;
+}
+.web-development {
+  border-radius: 20px;
+  height: 550px;
+  width: 430px;
+  animation: glow-shad 2s linear infinite;
+}
+.web-development h1 {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-size: 2rem;
+  background-color: aqua;
+  color: black;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.web-development p {
+  font-size: 1.2rem;
+  padding: 0px 10px 10px 10px;
+  text-align: center;
+  color: white;
+}
+.web-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.web-developer-btn {
+  display: inline-block;
+  margin-top:107px ;
+  color: black;
+  padding: var(--btn-padding);
+  font-weight: var(--btn-font-weight);
+  font-size: 1.3rem;
+  background-color: aqua;
+  border-radius: 34px;
+  transition: transform 0.5s;
+}
+.web-developer-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px 0px aqua;
+}
+
+/* web designer section css here */
+.web-designer {
+  border-radius: 20px;
+  height: 550px;
+  width: 430px;
+  animation: glow-shad 2s linear infinite;
+}
+
+.web-designer h1 {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-size: 2rem;
+  background-color: aqua;
+  color: black;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.web-designer p {
+  font-size: 1.2rem;
+  padding: 0px 10px 10px 10px;
+  text-align: center;
+  color: white;
+}
+.web-d-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.web-designer-btn {
+  display: inline-block;
+  margin-top: 25px;
+  color: black;
+  padding: var(--btn-padding);
+  font-weight: var(--btn-font-weight);
+  font-size: 1.3rem;
+  background-color: aqua;
+  border-radius: 34px;
+  transition: transform 0.5s;
+}
+.web-designer-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px 0px aqua;
+}
+
+.java-developer {
+  border-radius: 20px;
+  height: 550px;
+  width: 430px;
+  animation: glow-shad 2s linear infinite;
+}
+
+.java-developer h1 {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-size: 2rem;
+  background-color: aqua;
+  color: black;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.java-developer p {
+  font-size: 1.2rem;
+  padding: 0px 10px 10px 10px;
+  text-align: center;
+  color: white;
+}
+.java-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.java-developer-btn {
+  display: inline-block;
+  margin-top: 45px;
+  color: black;
+  padding: var(--btn-padding);
+  font-weight: var(--btn-font-weight);
+  font-size: 1.3rem;
+  background-color: aqua;
+  border-radius: 34px;
+  transition: transform 0.5s;
+}
+.java-developer-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px 0px aqua;
+}
+
+/* projectb section css here */
+.project-container {
+  margin: 80px 0px 80px 0px;
+}
+.project-container h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  color: aqua;
+  margin-bottom: 40px;
+}
+.project-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.atm-interface {
+  width: 400px;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.atm-interface .atm-ui {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+.atm-interface span {
+  position: absolute;
+  bottom: -330px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.505);
+  transition: all 0.5s;
+  padding-top: 30px;
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: 700;
+}
+.atm-interface:hover span {
+  bottom: 0px;
+  text-shadow: 0px 0px 10px aqua;
+}
+.atm-interface:hover {
+  transform: translateY(-20px);
+}
+
+.myntra-clone {
+  width: 400px;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.myntra-clone .myntra-ui {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+.myntra-clone span {
+  position: absolute;
+  bottom: -330px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.505);
+  transition: all 0.5s;
+  padding-top: 30px;
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: 700;
+}
+.myntra-clone:hover span {
+  bottom: 0px;
+  text-shadow: 0px 0px 10px aqua;
+}
+.myntra-clone:hover {
+  transform: translateY(-20px);
+}
+
+.burger-king {
+  width: 400px;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.burger-king .burger-ui {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+.burger-king span {
+  position: absolute;
+  bottom: -330px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.505);
+  transition: all 0.5s;
+  padding-top: 30px;
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: 700;
+}
+.burger-king:hover span {
+  bottom: 0px;
+  text-shadow: 0px 0px 10px aqua;
+}
+.burger-king:hover {
+  transform: translateY(-20px);
+}
+
+.courier-website {
+  width: 400px;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.courier-website .courier-ui {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+.courier-website span {
+  position: absolute;
+  bottom: -330px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.505);
+  transition: all 0.5s;
+  padding-top: 30px;
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: 700;
+}
+.courier-website:hover span {
+  bottom: 0px;
+  text-shadow: 0px 0px 10px aqua;
+}
+.courier-website:hover {
+  transform: translateY(-20px);
+}
+
+/* contact me css here */
+.contact-me-container {
+  margin: 80px 0px 50px 0px;
+}
+.contact-me-container h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  color: aqua;
+  margin-bottom: 40px;
+}
+.contact-me-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+}
+.contact-detail-section {
+  width: 500px;
+}
+.contact-detail-section h3 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: aqua;
+  margin-bottom: 20px;
+}
+.contact-detail-section .detail-1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 10px;
+}
+.contact-detail-section .detail-2 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: white;
+}
+.contact-detail-section .detail-2 span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: black;
+  background-color: aqua;
+  border-radius: 5px;
+}
+.contact-icon {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  row-gap: 5px;
+}
+.whatsapp-icon {
+  display: inline-block;
+  color: aqua;
+  font-size: 2.5rem;
+  margin-left: 1rem;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+.whatsapp-icon:hover {
+  color: white;
+  transform: scale(1.4);
+}
+.contact-number {
+  display: inline-block;
+  color: aqua;
+  font-size: 1.6rem;
+  margin-left: 1rem;
+}
+.location-icon {
+  display: inline-block;
+  color: aqua;
+  font-size: 2.5rem;
+  margin-left: 1rem;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+.location-icon:hover {
+  color: white;
+  transform: scale(1.4);
+}
+.address {
+  display: inline-block;
+  color: aqua;
+  font-size: 1.6rem;
+  margin-left: 1rem;
+}
+/* contact form css here */
+.contact-form-section{
+    width: 800px;
+}
+.contact-form-section .two-field-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 10px;
+}
+.contact-form-section .two-field-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+input:focus {
+  outline: 1px solid aqua;
+  box-shadow: 0px 0px 5px 0px aqua;
+}
+#namefield {
+  display: inline-block;
+  border: none;
+  width: 380px;
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: aqua;
+  color: black;
+}
+#namefield::placeholder {
+  font-size: 1.3rem;
+  padding: 10px 0px 0px 3px;
+  font-weight: 500;
+  color: black;
+}
+#email {
+  border: none;
+  width: 380px;
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: aqua;
+  color: black;
+}
+#email::placeholder {
+  font-size: 1.3rem;
+  padding: 10px 0px 0px 3px;
+  font-weight: 500;
+  color: black;
+}
+#number {
+  border: none;
+  width: 380px;
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: aqua;
+  color: black;
+}
+#number::placeholder {
+  font-size: 1.3rem;
+  padding: 10px 0px 0px 3px;
+  font-weight: 500;
+  color: black;
+}
+textarea {
+  resize: none;
+  overflow: visible;
+}
+textarea:focus {
+  outline: 1px solid aqua;
+  box-shadow: 0px 0px 5px 0px aqua;
+}
+.textarea {
+  display: block;
+  border: none;
+  width: 97%;
+  height: 140px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 20px;
+  background-color: aqua;
+  color: black;
+}
+.textarea::placeholder {
+  font-size: 1.3rem;
+  padding: 10px 0px 0px 3px;
+  font-weight: 500;
+  color: black;
+}
+.submit-now {
+  width: 94%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.submit-btn {
+  width: 100%;
+  display: inline-block;
+  margin-top: 25px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: aqua;
+  padding: 5px 10px 5px 10px;
+  color: black;
+  transition: transform 0.5s;
+  border: none;
+}
+.submit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px 0px aqua;
+}
+
+/* footer section here */
+.footer {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.footer-section {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(50px);
+  color: white;
+  position: absolute;
+  height: 300px;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+}
+.contact-us h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: aqua;
+}
+.footer-email {
+  text-align: center;
+}
+.footer-whatsapp {
+  text-align: center;
+}
+.footer-location {
+  text-align: center;
+}
+.f-whatsapp-icon {
+  display: inline-block;
+  color: aqua;
+  margin-right: 10px;
+  font-size: 1.8rem;
+  transition: transform 0.5s;
+}
+.f-whatsapp-icon:hover {
+  color: white;
+  transform: scale(1.2);
+}
+.footer-number {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.f-location-icon {
+  display: inline-block;
+  color: aqua;
+  font-size: 1.8rem;
+  margin-right: 10px;
+  transition: transform 0.5s;
+}
+.f-location-icon:hover {
+  color: white;
+  transform: scale(1.2);
+}
+.footer-address {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.f-email-icon {
+  display: inline-block;
+  margin-right: 10px;
+  color: aqua;
+  font-size: 1.8rem;
+  transition: transform 0.5s;
+}
+.f-email-icon:hover {
+  color: white;
+  transform: scale(1.2);
+}
+.footer-email {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.sub-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 20px 10px 20px;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+}
+.sub-footer p {
+  font-size: 1.2rem;
+}
+.sub-footer span {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.social-media .social-icon {
+  display: inline-block;
+  color: aqua;
+  font-size: 2rem;
+  margin-left: 0.8rem;
+  transition: transform 0.5s;
+}
+.social-media .social-icon:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+
+
+
+/* media query between 768px to 1024px */
+@media (min-width: 768px) and (max-width:1024px) {
+  .nav-links a {
+    font-size: 1.02rem;
+  }
+  .my-details{
+    flex-wrap: wrap;
+  }
+  .img img{
+    margin-top: 50px;
+  }
+  .about-me-content p {
+    width: 550px;
+    font-size: 1.4rem;
+  }
+  .about-me-img img{
+    margin-bottom: 30px;
+  }
+  .about-me-box {
+    column-gap: 50px;
+    flex-wrap: wrap-reverse;
+  }
+  .oasis-infobyte,
+  .infutech,
+  .damits,
+  .internshala {
+    width: 350px;
+    height: 280px;
+  }
+  /*  */
+  .contact-me-section{
+    justify-content: center;
+    row-gap: 20px;
+    flex-wrap: wrap;
+  }
+  #namefield {
+    width: 40%;
+  }
+  #email {
+    width: 40%;
+  }
+  #number {
+    width: 40%;
+  }
+  .textarea{
+    width:80%;
+    margin: 0 auto;
+  }
+  .submit-now {
+    width: 80%;
+  }
+  .footer-section {
+    height: 220px;
+  }
+  .sub-footer p {
+    font-size: 0.9rem;
+  }
+  .sub-footer span {
+    font-size: 1.2rem;
+  }
+  .social-media .social-icon {
+    display: inline-block;
+    color: aqua;
+    font-size: 1.5rem;
+    margin-left: 0.8rem;
+    transition: transform 0.5s;
+  }
+  .f-email-icon {
+    font-size: 1.5rem;
+  }
+  .footer-email {
+    font-size: 1rem;
+  }
+  .f-location-icon {
+    font-size: 1.5rem;
+  }
+  .footer-address {
+    font-size: 1rem;
+  }
+  .f-whatsapp-icon {
+    font-size: 1.5rem;
+  }
+  .footer-number {
+    font-size: 1rem;
+  }
+}
+
+
+/* small Device Like mobile 320px */
+@media (max-width:320px) {
+    nav{
+        padding: 0px 10px 0px 10px;
+    }
+    .menu-icon,.close-icon{
+        font-size: 1.7rem;
+    }
+    .mobile-nav-bar a{
+      font-size: 1rem;
+    }
+    .nav-links a{
+        display: none;
+    }
+    .logo {
+        font-size: 1.3rem;
+      }
+      .menu-icon{
+        display: block;
+      }
+      #click:checked~.menu-close-icon .menu-icon{
+        display: none;
+      }
+      #click:checked~.menu-close-icon .close-icon{
+        display: block;
+      }
+      #click:checked~.mobile-nav-bar{
+          height: 14rem;
+      }
+      .toggle-button{
+        width: 40px;
+        height: 20px;
+      }
+      /* My front details section */
+      .my-details{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        margin: 50px 0px 70px 0px;
+      }
+      .my-details-leftpart {
+        width: 100%;
+      }
+      .my-name h3{
+        font-size: 1.5rem;
+      }
+      .my-name h1{
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      .my-name span {
+        font-size: 1.4rem;
+      }
+      .social-media-links .social-icon
+      {
+        font-size: 1.4rem;
+        margin-left: 1rem;
+      }
+      span .btn {
+        margin-top: 30px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        padding: 5px 10px 5px 10px;
+      }
+      .img img {
+        margin-top: 20px;
+        width:220px;
+        height:200px;
+      }
+      /* About me css here */
+      .about-me-section{
+        margin: 50px 0px 50px 0px;
+      }
+      .about-me-box{
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 20px;
+      }
+      .about-me-section h1{
+        font-size: 2.2rem;
+      }
+      .about-me-content h3 {
+        font-size: 1.5rem;
+        color: white;
+      }
+      .about-me-content p {
+        font-size: 0.8rem;
+        color: white;
+        width: 100%;
+      }
+      .about-me-content span a{
+        font-size: 1rem;
+        margin-top: 15px;
+      }
+      .about-me-img img{
+        width:200px;
+        height: 200px;
+      }
+      /* skill section css here */
+      .skills-section {
+        margin: 50px 0px 50px 0px;
+      }
+      .skills-section h1{
+        font-size: 2.2rem;
+      }
+      .html-header h3 {
+        font-size: 1.2rem;
+      }
+      .html-header h4 {
+        font-size: 1rem;
+      }
+      .css-header h3{
+        font-size: 1.2rem;
+      }
+      .css-header h4{
+         font-size: 1rem;
+      }
+      .js-header h3{
+        font-size: 1.2rem;
+      }
+      .js-header h4{
+         font-size: 1rem;
+      }
+      .react-header h3{
+        font-size: 1.2rem;
+      }
+      .react-header h4{
+         font-size: 1rem;
+      }
+      .java-header h3{
+        font-size: 1.2rem;
+      }
+      .java-header h4{
+         font-size: 1rem;
+      }
+      .mysql-header h3{
+        font-size: 1.2rem;
+      }
+      .mysql-header h4{
+         font-size: 1rem;
+      }
+      /* certificate section css here */
+      .certifications-section h1{
+        font-size: 2.2rem;
+      }
+      .oasis-infobyte,.infutech,.internshala,.damits{
+        width: 300px;
+        height: 200px;
+      }
+      .oasis-infobyte a,.damits a,.internshala a,.infutech a{
+        font-size: 1.2rem;
+      }
+      .oasis-infobyte strong,.damits strong,.internshala strong,.infutech strong{
+        font-size: 1.4rem;
+      }
+      
+      /* service section css here */
+      .service-container h1{
+        font-size: 2.2rem;
+      }
+      .web-development,.web-designer,.java-developer{
+        height: 100%;
+      }
+      .web-designer-btn,.java-developer-btn,.web-developer-btn{
+        margin-bottom: 25px ;
+        font-size: 1.2rem;
+      }
+      .java-developer p,.web-designer p,.web-development p{
+        font-size: 1.1rem;
+      }
+      .web-development h1,.web-designer h1,.java-developer h1{
+        font-size: 1.4rem;
+      }
+
+      /* project section css here */
+      .project-container h1{
+        font-size: 2.2rem;
+      }
+      .atm-interface,.courier-website,.burger-king,.myntra-clone{
+        width:300px;
+        height: 200px;
+      }
+      /* contact me section here */
+      .contact-me-container h1{
+        font-size: 2.2rem;
+      }
+      .contact-me-section{
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+      }
+      .contact-detail-section{
+        width: 100%;
+      }
+      .contact-detail-section h3{
+        font-size: 1.5rem;
+      }
+      .contact-detail-section .detail-1 {
+        font-size: 1rem;
+      }
+      .contact-detail-section .detail-2 {
+        font-size: 0.9rem;
+      }
+      .contact-detail-section .detail-2 span {
+        font-size: 1.1rem;
+      }
+      .whatsapp-icon,.location-icon  {
+        font-size: 1.8rem;
+      }
+      .contact-number,.address {
+        font-size: 1rem;
+        margin-left: 5px;
+      }
+      .contact-icon {
+        margin-top: 10px;
+      }
+      .contact-form-section .two-field-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-form-section{
+        width: 100%;
+    }
+    .contact-form-section .two-field-2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #namefield,#email,#number{
+        width: 95%;
+    }
+    #namefield::placeholder,#email::placeholder,#number::placeholder,.textarea::placeholder{
+        font-size: 1rem;
+    }
+    #namefield,#email,#number,.textarea
+    {
+        font-size: 1.1rem;
+    }
+    .textarea {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        margin: 0px auto;
+    }
+    .submit-btn
+    {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    /* Footer section css here */
+    .contact-us h3{
+        font-size: 1.8rem;
+    }
+    .footer-section {
+        height: 220px;
+      }
+      .sub-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .social-media .social-icon{
+        font-size: 1rem;
+      }
+      .sub-footer p {
+        font-size: 0.6rem;
+      }
+      .sub-footer span {
+        font-size: 0.9rem;
+      }
+      .social-media .social-icon {
+        display: inline-block;
+        color: aqua;
+        font-size: 1.5rem;
+        margin-left: 0.8rem;
+        transition: transform 0.5s;
+      }
+      .f-email-icon {
+        font-size: 1.5rem;
+      }
+      .footer-email {
+        font-size: 1rem;
+      }
+      .f-location-icon {
+        font-size: 1.5rem;
+      }
+      .footer-address {
+        font-size: 1rem;
+      }
+      .f-whatsapp-icon {
+        font-size: 1.5rem;
+      }
+      .footer-number {
+        font-size: 1rem;
+      }
+}
+
+
+/* Medium Device Like Mobile between 320px to 375px */
+@media (min-width:320px) and (max-width:375px) {
+    nav{
+        padding: 0px 10px 0px 10px;
+    }
+    .menu-icon,.close-icon{
+        font-size: 1.8rem;
+    }
+    .mobile-nav-bar a{
+      font-size: 1rem;
+    }
+    .nav-links a{
+        display: none;
+    }
+    .logo {
+        font-size: 1.5rem;
+      }
+      .menu-icon{
+        display: block;
+      }
+      #click:checked~.menu-close-icon .menu-icon{
+        display: none;
+      }
+      #click:checked~.menu-close-icon .close-icon{
+        display: block;
+      }
+      #click:checked~.mobile-nav-bar{
+          height: 14rem;
+      }
+      .toggle-button{
+        width: 40px;
+        height: 20px;
+      }
+      /* My front details section */
+      .my-details{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        margin: 50px 0px 70px 0px;
+      }
+      .my-details-leftpart {
+        width: 100%;
+      }
+      .my-name h3{
+        font-size: 1.5rem;
+      }
+      .my-name h1{
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      .my-name span {
+        font-size: 1.4rem;
+      }
+      .social-media-links .social-icon
+      {
+        font-size: 1.4rem;
+        margin-left: 1rem;
+      }
+      span .btn {
+        margin-top: 30px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        padding: 5px 10px 5px 10px;
+      }
+      .img img {
+        margin-top: 20px;
+        width:240px;
+        height:220px;
+      }
+      /* About me css here */
+      .about-me-section{
+        margin: 50px 0px 50px 0px;
+      }
+      .about-me-box{
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 20px;
+      }
+      .about-me-section h1{
+        font-size: 2.2rem;
+      }
+      .about-me-content h3 {
+        font-size: 1.5rem;
+        color: white;
+      }
+      .about-me-content p {
+        font-size: 0.8rem;
+        color: white;
+        width: 100%;
+      }
+      .about-me-content span a{
+        font-size: 1rem;
+        margin-top: 15px;
+      }
+      .about-me-img img{
+        width:220px;
+        height: 220px;
+      }
+      /* skill section css here */
+      .skills-section {
+        margin: 50px 0px 50px 0px;
+      }
+      .skills-section h1{
+        font-size: 2.2rem;
+      }
+      .html-header h3 {
+        font-size: 1.2rem;
+      }
+      .html-header h4 {
+        font-size: 1rem;
+      }
+      .css-header h3{
+        font-size: 1.2rem;
+      }
+      .css-header h4{
+         font-size: 1rem;
+      }
+      .js-header h3{
+        font-size: 1.2rem;
+      }
+      .js-header h4{
+         font-size: 1rem;
+      }
+      .react-header h3{
+        font-size: 1.2rem;
+      }
+      .react-header h4{
+         font-size: 1rem;
+      }
+      .java-header h3{
+        font-size: 1.2rem;
+      }
+      .java-header h4{
+         font-size: 1rem;
+      }
+      .mysql-header h3{
+        font-size: 1.2rem;
+      }
+      .mysql-header h4{
+         font-size: 1rem;
+      }
+      /* certificate section css here */
+      .certifications-section h1{
+        font-size: 2.2rem;
+      }
+      .oasis-infobyte,.infutech,.internshala,.damits{
+        width: 300px;
+        height: 200px;
+      }
+      .oasis-infobyte a,.damits a,.internshala a,.infutech a{
+        font-size: 1.2rem;
+      }
+      .oasis-infobyte strong,.damits strong,.internshala strong,.infutech strong{
+        font-size: 1.4rem;
+      }
+      /* service section css here */
+      .service-container h1{
+        font-size: 2.2rem;
+      }
+      .web-development,.web-designer,.java-developer{
+        height: 100%;
+      }
+      .web-designer-btn,.java-developer-btn,.web-developer-btn{
+        margin-bottom: 25px ;
+        font-size: 1.2rem;
+      }
+      .java-developer p,.web-designer p,.web-development p{
+        font-size: 1.1rem;
+      }
+      .web-development h1,.web-designer h1,.java-developer h1{
+        font-size: 1.4rem;
+      }
+
+      /* project section css here */
+      .project-container h1{
+        font-size: 2.2rem;
+      }
+      .atm-interface,.courier-website,.burger-king,.myntra-clone{
+        width:300px;
+        height: 200px;
+      }
+      /* contact me section here */
+      .contact-me-container h1{
+        font-size: 2.2rem;
+      }
+      .contact-me-section{
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+      }
+      .contact-detail-section{
+        width: 100%;
+      }
+      .contact-detail-section h3{
+        font-size: 1.5rem;
+      }
+      .contact-detail-section .detail-1 {
+        font-size: 1rem;
+      }
+      .contact-detail-section .detail-2 {
+        font-size: 0.9rem;
+      }
+      .contact-detail-section .detail-2 span {
+        font-size: 1.1rem;
+      }
+      .whatsapp-icon,.location-icon  {
+        font-size: 1.8rem;
+      }
+      .contact-number,.address {
+        font-size: 1rem;
+        margin-left: 5px;
+      }
+      .contact-icon {
+        margin-top: 10px;
+      }
+      .contact-form-section .two-field-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-form-section{
+        width: 100%;
+    }
+    .contact-form-section .two-field-2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #namefield,#email,#number{
+        width: 95%;
+    }
+    #namefield::placeholder,#email::placeholder,#number::placeholder,.textarea::placeholder{
+        font-size: 1rem;
+    }
+    #namefield,#email,#number,.textarea
+    {
+        font-size: 1.1rem;
+    }
+    .textarea {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        margin: 0px auto;
+    }
+    .submit-btn
+    {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    /* Footer section css here */
+    .contact-us h3{
+        font-size: 1.8rem;
+    }
+    .footer-section {
+        height: 220px;
+      }
+      .sub-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .social-media .social-icon{
+        font-size: 1rem;
+      }
+      .sub-footer p {
+        font-size: 0.6rem;
+      }
+      .sub-footer span {
+        font-size: 0.9rem;
+      }
+      .social-media .social-icon {
+        display: inline-block;
+        color: aqua;
+        font-size: 1.5rem;
+        margin-left: 0.8rem;
+        transition: transform 0.5s;
+      }
+      .f-email-icon {
+        font-size: 1.5rem;
+      }
+      .footer-email {
+        font-size: 1rem;
+      }
+      .f-location-icon {
+        font-size: 1.5rem;
+      }
+      .footer-address {
+        font-size: 1rem;
+      }
+      .f-whatsapp-icon {
+        font-size: 1.5rem;
+      }
+      .footer-number {
+        font-size: 1rem;
+      }
+}
+
+
+/* break points in large mobile between 367px to 425px  */
+@media (min-width:375px) and (max-width:425px) {
+    nav{
+        padding: 0px 10px 0px 10px;
+    }
+    .menu-icon,.close-icon{
+        font-size: 1.8rem;
+    }
+    .mobile-nav-bar a{
+      font-size: 1rem;
+    }
+    .nav-links a{
+        display: none;
+    }
+    .logo {
+        font-size: 1.5rem;
+      }
+      .menu-icon{
+        display: block;
+      }
+      #click:checked~.menu-close-icon .menu-icon{
+        display: none;
+      }
+      #click:checked~.menu-close-icon .close-icon{
+        display: block;
+      }
+      #click:checked~.mobile-nav-bar{
+          height: 14rem;
+      }
+      .toggle-button{
+        width: 40px;
+        height: 20px;
+      }
+      /* My front details section */
+      .my-details{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        margin: 50px 0px 70px 0px;
+      }
+      .my-details-leftpart {
+        width: 100%;
+      }
+      .my-name h3{
+        font-size: 1.5rem;
+      }
+      .my-name h1{
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      .my-name span {
+        font-size: 1.4rem;
+      }
+      .social-media-links .social-icon
+      {
+        font-size: 1.4rem;
+        margin-left: 1rem;
+      }
+      span .btn {
+        margin-top: 30px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        padding: 5px 10px 5px 10px;
+      }
+      .img img {
+        margin-top: 20px;
+        width:250px;
+        height:230px;
+      }
+      /* About me css here */
+      .about-me-section{
+        margin: 50px 0px 50px 0px;
+      }
+      .about-me-box{
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 20px;
+      }
+      .about-me-section h1{
+        font-size: 2.2rem;
+      }
+      .about-me-content h3 {
+        font-size: 1.5rem;
+        color: white;
+      }
+      .about-me-content p {
+        font-size: 0.8rem;
+        color: white;
+        width: 100%;
+      }
+      .about-me-content span a{
+        font-size: 1rem;
+        margin-top: 15px;
+      }
+      .about-me-img img{
+        width:230px;
+        height: 230px;
+      }
+      /* skill section css here */
+      .skills-section {
+        margin: 50px 0px 50px 0px;
+      }
+      .skills-section h1{
+        font-size: 2.2rem;
+      }
+      .html-header h3 {
+        font-size: 1.2rem;
+      }
+      .html-header h4 {
+        font-size: 1rem;
+      }
+      .css-header h3{
+        font-size: 1.2rem;
+      }
+      .css-header h4{
+         font-size: 1rem;
+      }
+      .js-header h3{
+        font-size: 1.2rem;
+      }
+      .js-header h4{
+         font-size: 1rem;
+      }
+      .react-header h3{
+        font-size: 1.2rem;
+      }
+      .react-header h4{
+         font-size: 1rem;
+      }
+      .java-header h3{
+        font-size: 1.2rem;
+      }
+      .java-header h4{
+         font-size: 1rem;
+      }
+      .mysql-header h3{
+        font-size: 1.2rem;
+      }
+      .mysql-header h4{
+         font-size: 1rem;
+      }
+      /* certificate section css here */
+      .certifications-section h1{
+        font-size: 2.2rem;
+      }
+      .oasis-infobyte,.infutech,.internshala,.damits{
+        width: 300px;
+        height: 200px;
+      }
+      .oasis-infobyte a,.damits a,.internshala a,.infutech a{
+        font-size: 1.2rem;
+      }
+      .oasis-infobyte strong,.damits strong,.internshala strong,.infutech strong{
+        font-size: 1.4rem;
+      }
+      /* service section css here */
+      .service-container h1{
+        font-size: 2.2rem;
+      }
+      .web-development,.web-designer,.java-developer{
+        height: 100%;
+      }
+      .web-designer-btn,.java-developer-btn,.web-developer-btn{
+        margin-bottom: 25px ;
+        font-size: 1.2rem;
+      }
+      .java-developer p,.web-designer p,.web-development p{
+        font-size: 1.1rem;
+      }
+      .web-development h1,.web-designer h1,.java-developer h1{
+        font-size: 1.4rem;
+      }
+
+      /* project section css here */
+      .project-container h1{
+        font-size: 2.2rem;
+      }
+      .atm-interface,.courier-website,.burger-king,.myntra-clone{
+        width:300px;
+        height: 200px;
+      }
+      /* contact me section here */
+      .contact-me-container h1{
+        font-size: 2.2rem;
+      }
+      .contact-me-section{
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+      }
+      .contact-detail-section{
+        width: 100%;
+      }
+      .contact-detail-section h3{
+        font-size: 1.5rem;
+      }
+      .contact-detail-section .detail-1 {
+        font-size: 1rem;
+      }
+      .contact-detail-section .detail-2 {
+        font-size: 0.9rem;
+      }
+      .contact-detail-section .detail-2 span {
+        font-size: 1.1rem;
+      }
+      .whatsapp-icon,.location-icon  {
+        font-size: 1.8rem;
+      }
+      .contact-number,.address {
+        font-size: 1rem;
+        margin-left: 5px;
+      }
+      .contact-icon {
+        margin-top: 10px;
+      }
+      .contact-form-section .two-field-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-form-section{
+        width: 100%;
+    }
+    .contact-form-section .two-field-2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #namefield,#email,#number{
+        width: 95%;
+    }
+    #namefield::placeholder,#email::placeholder,#number::placeholder,.textarea::placeholder{
+        font-size: 1rem;
+    }
+    #namefield,#email,#number,.textarea
+    {
+        font-size: 1.1rem;
+    }
+    .textarea {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        margin: 0px auto;
+    }
+    .submit-btn
+    {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    /* Footer section css here */
+    .contact-us h3{
+        font-size: 1.8rem;
+    }
+    .footer-section {
+        height: 220px;
+      }
+      .sub-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .social-media .social-icon{
+        font-size: 1rem;
+      }
+      .sub-footer p {
+        font-size: 0.8rem;
+      }
+      .sub-footer span {
+        font-size: 0.9rem;
+      }
+      .social-media .social-icon {
+        display: inline-block;
+        color: aqua;
+        font-size: 1.5rem;
+        margin-left: 0.8rem;
+        transition: transform 0.5s;
+      }
+      .f-email-icon {
+        font-size: 1.5rem;
+      }
+      .footer-email {
+        font-size: 1rem;
+      }
+      .f-location-icon {
+        font-size: 1.5rem;
+      }
+      .footer-address {
+        font-size: 1rem;
+      }
+      .f-whatsapp-icon {
+        font-size: 1.5rem;
+      }
+      .footer-number {
+        font-size: 1rem;
+      }
+}
+
+/* media query between 425px to 600px */
+@media (min-width: 425px) and (max-width: 600px){
+    nav{
+        padding: 0px 10px 0px 10px;
+    }
+    .menu-icon,.close-icon{
+        font-size: 1.8rem;
+    }
+    .mobile-nav-bar a{
+      font-size: 1rem;
+    }
+    .nav-links a{
+        display: none;
+    }
+    .logo {
+        font-size: 1.5rem;
+      }
+      .menu-icon{
+        display: block;
+      }
+      #click:checked~.menu-close-icon .menu-icon{
+        display: none;
+      }
+      #click:checked~.menu-close-icon .close-icon{
+        display: block;
+      }
+      #click:checked~.mobile-nav-bar{
+          height: 14rem;
+      }
+      .toggle-button{
+        width: 50px;
+        height: 25px;
+      }
+      /* My front details section */
+      .my-details{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        margin: 50px 0px 70px 0px;
+      }
+      .my-details-leftpart {
+        width: 100%;
+      }
+      .my-name h3{
+        font-size: 1.5rem;
+      }
+      .my-name h1{
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      .my-name span {
+        font-size: 1.4rem;
+      }
+      .social-media-links .social-icon
+      {
+        font-size: 1.4rem;
+        margin-left: 1rem;
+      }
+      span .btn {
+        margin-top: 30px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        padding: 5px 10px 5px 10px;
+      }
+      .img img {
+        margin-top: 20px;
+        width:270px;
+        height:250px;
+      }
+      /* About me css here */
+      .about-me-section{
+        margin: 50px 0px 50px 0px;
+      }
+      .about-me-box{
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 20px;
+      }
+      .about-me-section h1{
+        font-size: 2.2rem;
+      }
+      .about-me-content h3 {
+        font-size: 1.5rem;
+        color: white;
+      }
+      .about-me-content p {
+        font-size: 0.9rem;
+        color: white;
+        width: 100%;
+      }
+      .about-me-content span a{
+        font-size: 1rem;
+        margin-top: 15px;
+      }
+      .about-me-img img{
+        width:250px;
+        height: 250px;
+      }
+      /* skill section css here */
+      .skills-section {
+        margin: 50px 0px 50px 0px;
+      }
+      .skills-section h1{
+        font-size: 2.2rem;
+      }
+      .html-header h3 {
+        font-size: 1.2rem;
+      }
+      .html-header h4 {
+        font-size: 1rem;
+      }
+      .css-header h3{
+        font-size: 1.2rem;
+      }
+      .css-header h4{
+         font-size: 1rem;
+      }
+      .js-header h3{
+        font-size: 1.2rem;
+      }
+      .js-header h4{
+         font-size: 1rem;
+      }
+      .react-header h3{
+        font-size: 1.2rem;
+      }
+      .react-header h4{
+         font-size: 1rem;
+      }
+      .java-header h3{
+        font-size: 1.2rem;
+      }
+      .java-header h4{
+         font-size: 1rem;
+      }
+      .mysql-header h3{
+        font-size: 1.2rem;
+      }
+      .mysql-header h4{
+         font-size: 1rem;
+      }
+      /* certificate section css here */
+      .certifications-section h1{
+        font-size: 2.2rem;
+      }
+      .oasis-infobyte,.infutech,.internshala,.damits{
+        width: 300px;
+        height: 200px;
+      }
+      .oasis-infobyte a,.damits a,.internshala a,.infutech a{
+        font-size: 1.2rem;
+      }
+      .oasis-infobyte strong,.damits strong,.internshala strong,.infutech strong{
+        font-size: 1.4rem;
+      }
+      /* service section css here */
+      .service-container h1{
+        font-size: 2.2rem;
+      }
+      .web-development,.web-designer,.java-developer{
+        height: 100%;
+      }
+      .web-designer-btn,.java-developer-btn,.web-developer-btn{
+        margin-bottom: 25px ;
+        font-size: 1.2rem;
+      }
+      .java-developer p,.web-designer p,.web-development p{
+        font-size: 1.1rem;
+      }
+      .web-development h1,.web-designer h1,.java-developer h1{
+        font-size: 1.4rem;
+      }
+
+      /* project section css here */
+      .project-container h1{
+        font-size: 2.2rem;
+      }
+      .atm-interface,.courier-website,.burger-king,.myntra-clone{
+        width:300px;
+        height: 200px;
+      }
+      /* contact me section here */
+      .contact-me-container h1{
+        font-size: 2.2rem;
+      }
+      .contact-me-section{
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+      }
+      .contact-detail-section{
+        width: 100%;
+      }
+      .contact-detail-section h3{
+        font-size: 1.5rem;
+      }
+      .contact-detail-section .detail-1 {
+        font-size: 1rem;
+      }
+      .contact-detail-section .detail-2 {
+        font-size: 0.9rem;
+      }
+      .contact-detail-section .detail-2 span {
+        font-size: 1.1rem;
+      }
+      .whatsapp-icon,.location-icon  {
+        font-size: 1.8rem;
+      }
+      .contact-number,.address {
+        font-size: 1rem;
+        margin-left: 5px;
+      }
+      .contact-icon {
+        margin-top: 10px;
+      }
+      .contact-form-section .two-field-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-form-section{
+        width: 100%;
+    }
+    .contact-form-section .two-field-2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #namefield,#email,#number{
+        width: 95%;
+    }
+    #namefield::placeholder,#email::placeholder,#number::placeholder,.textarea::placeholder{
+        font-size: 1rem;
+    }
+    #namefield,#email,#number,.textarea
+    {
+        font-size: 1.1rem;
+    }
+    .textarea {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        margin: 0px auto;
+    }
+    .submit-btn
+    {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    /* Footer section css here */
+    .contact-us h3{
+        font-size: 1.8rem;
+    }
+    .footer-section {
+        height: 220px;
+      }
+      .sub-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .social-media .social-icon{
+        font-size: 1rem;
+      }
+      .sub-footer p {
+        font-size: 0.8rem;
+      }
+      .sub-footer span {
+        font-size: 0.9rem;
+      }
+      .social-media .social-icon {
+        display: inline-block;
+        color: aqua;
+        font-size: 1.5rem;
+        margin-left: 0.8rem;
+        transition: transform 0.5s;
+      }
+      .f-email-icon {
+        font-size: 1.5rem;
+      }
+      .footer-email {
+        font-size: 1rem;
+      }
+      .f-location-icon {
+        font-size: 1.5rem;
+      }
+      .footer-address {
+        font-size: 1rem;
+      }
+      .f-whatsapp-icon {
+        font-size: 1.5rem;
+      }
+      .footer-number {
+        font-size: 1rem;
+      }
+}
+
+
+/* tablet break points between 600px to 768px */
+@media (min-width:600px) and (max-width:768px) {
+    .nav-links a{
+        display: none;
+    }
+    .logo {
+        font-size: 1.5rem;
+      }
+      .menu-icon{
+        display: block;
+      }
+      #click:checked~.menu-close-icon .menu-icon{
+        display: none;
+      }
+      #click:checked~.menu-close-icon .close-icon{
+        display: block;
+      }
+      #click:checked~.mobile-nav-bar{
+          height: 16rem;
+      }
+      .my-details{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        margin: 50px 0px 70px 0px;
+      }
+      .my-details-leftpart {
+        width: 500px;
+      }
+      .my-name h1{
+        font-size: 4rem;
+        font-weight: 700;
+      }
+      .my-name span {
+        font-size: 1.8rem;
+      }
+      span .btn {
+        margin-top: 30px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 5px 10px 5px 10px;
+      }
+      .img img {
+        width:320px;
+        height:300px;
+      }
+      /* About me css here */
+      .about-me-section{
+        margin: 50px 0px 50px 0px;
+      }
+      .about-me-box{
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 20px;
+      }
+      .about-me-section h1{
+        font-size: 2.5rem;
+      }
+      .about-me-content h3 {
+        font-size: 1.8rem;
+        color: white;
+      }
+      .about-me-content p {
+        font-size: 1.1rem;
+        color: white;
+      }
+      .about-me-content span a{
+        font-size: 1.2rem;
+      }
+      .about-me-img img{
+        width:300px;
+        height: 300px;
+      }
+      /* skill section css here */
+      .skills-section {
+        margin: 50px 0px 50px 0px;
+      }
+      .skills-section h1{
+        font-size: 2.5rem;
+      }
+      .html-header h3 {
+        font-size: 1.5rem;
+      }
+      .html-header h4 {
+        font-size: 1rem;
+      }
+      .css-header h3{
+        font-size: 1.5rem;
+      }
+      .css-header h4{
+         font-size: 1rem;
+      }
+      .js-header h3{
+        font-size: 1.5rem;
+      }
+      .js-header h4{
+         font-size: 1rem;
+      }
+      .react-header h3{
+        font-size: 1.5rem;
+      }
+      .react-header h4{
+         font-size: 1rem;
+      }
+      .java-header h3{
+        font-size: 1.5rem;
+      }
+      .java-header h4{
+         font-size: 1rem;
+      }
+      .mysql-header h3{
+        font-size: 1.5rem;
+      }
+      .mysql-header h4{
+         font-size: 1rem;
+      }
+      /* certificate section css here */
+      .certifications-section h1{
+        font-size: 2.5rem;
+      }
+      .oasis-infobyte a,.damits a,.internshala a,.infutech a{
+        font-size: 1.4rem;
+      }
+      .oasis-infobyte strong,.damits strong,.internshala strong,.infutech strong{
+        font-size: 1.6rem;
+      }
+      /* service section css here */
+      .service-container h1{
+        font-size: 2.5rem;
+      }
+      .web-development h1{
+        font-size: 1.7rem;
+      }
+      .web-designer h1{
+        font-size: 1.7rem;
+      }
+      .java-developer h1{
+        font-size: 1.7rem;
+      }
+      /* project section css here */
+      .project-container h1{
+        font-size: 2.5rem;
+      }
+      /* contact me section here */
+      .contact-me-container h1{
+        font-size: 2.5rem;
+      }
+      .contact-me-section{
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+      }
+      .contact-detail-section h3{
+        font-size: 1.7rem;
+      }
+      .contact-detail-section .detail-1 {
+        font-size: 1.1rem;
+      }
+      .contact-detail-section .detail-2 {
+        font-size: 1rem;
+      }
+      .contact-detail-section .detail-2 span {
+        font-size: 1.2rem;
+      }
+      .whatsapp-icon {
+        font-size: 2rem;
+      }
+      .contact-number {
+        font-size: 1.2rem;
+      }
+      .location-icon {
+        font-size: 2rem;
+      }
+      .address {
+        font-size: 1.2rem;
+      }
+      .contact-icon {
+        margin-top: 10px;
+      }
+      .contact-form-section .two-field-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-form-section{
+        width: 100%;
+    }
+    .contact-form-section .two-field-2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .textarea {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 380px;
+        margin: 0px auto;
+    }
+    .submit-btn
+    {
+        width: 380px;
+    }
+    .footer-section {
+        height: 220px;
+      }
+      .sub-footer p {
+        font-size: 0.8rem;
+      }
+      .sub-footer span {
+        font-size: 1.1rem;
+      }
+      .social-media .social-icon {
+        display: inline-block;
+        color: aqua;
+        font-size: 1.5rem;
+        margin-left: 0.8rem;
+        transition: transform 0.5s;
+      }
+      .f-email-icon {
+        font-size: 1.5rem;
+      }
+      .footer-email {
+        font-size: 1rem;
+      }
+      .f-location-icon {
+        font-size: 1.5rem;
+      }
+      .footer-address {
+        font-size: 1rem;
+      }
+      .f-whatsapp-icon {
+        font-size: 1.5rem;
+      }
+      .footer-number {
+        font-size: 1rem;
+      }
+}
